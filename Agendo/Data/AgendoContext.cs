@@ -15,5 +15,6 @@ namespace Agendo.Data
 
         }
         public DbSet<UserAccount> Users  { get; set; }
+        public DbSet<Events> Events { get; set; }
     }
 }
