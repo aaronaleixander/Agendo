@@ -1,6 +1,7 @@
 ﻿using Agendo.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +22,21 @@ namespace Agendo.Data
             return user;
         }
 
-        // TODO: Add IsLoginValid class here => need to have LoginViewModel added check Github.
+        
+        /// <summary>
+        /// Checks if credentials are found in the database.
+        /// The matching user is returned for valid credentials.
+        /// Null is returned if there are no matches.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public async static Task<UserAccount> IsLoginValid(LoginViewModel model, AgendoContext context)
+        {
+            return await (from m in context.Users
+                          where m.UserName == model.UsernameOrEmail || m.EmailAddress == model.UsernameOrEmail
+                                                      && m.Password == model.Password
+                          select m).SingleOrDefaultAsync(); // finds object that matches.
+        }
     }
 }

@@ -7,6 +7,7 @@ namespace Agendo.Models
 {
     public class Events
     {
+        
         public int EventID { get; set; }
 
         public string Subject { get; set; }
