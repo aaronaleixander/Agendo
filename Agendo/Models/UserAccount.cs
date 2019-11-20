@@ -8,6 +8,7 @@ namespace Agendo.Models
 {
     public class UserAccount
     {
+        [Key]
         public int UserID { get; set; }
 
         /// <summary>
