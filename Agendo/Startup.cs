@@ -77,6 +77,9 @@ namespace Agendo
             app.UseRouting();
 
             app.UseAuthorization();
+            // BE SURE TO CALL THE right IApllicationBuilder
+            app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
