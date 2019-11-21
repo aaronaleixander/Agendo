@@ -22,9 +22,15 @@ namespace Agendo.Controllers
         /// </summary>
         private readonly AgendoContext _context;
 
+        public AccountController(AgendoContext context, IHttpContextAccessor accessor)
+        {
+            _context = context;
+            _httpAccessor = accessor;
+        }
+
         // REGISTER
 
-       [HttpGet]
+        [HttpGet]
        public IActionResult Register()
         {
             return View();
