@@ -2,6 +2,13 @@
     background-image: url("Images/agendo_background.png");
 }
 
+#regheader {
+    margin-left: 50em;
+}
+#logheader {
+
+}
+
 #welcome-text{
     color: whitesmoke;
 }
