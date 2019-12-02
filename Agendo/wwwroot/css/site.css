@@ -6,11 +6,28 @@
     margin-left: 50em;
 }
 #calander-1{
-    float: left;
+   
+   margin-left: 10em;
+    
 }
 
-#welcome-text{
-    color: whitesmoke;
+#cal-text {
+    font-size: 3em;
+    text-align: center;
+    color: navajowhite;
+}
+
+#title-text {
+    
+    font-size: 8em;
+    
+}
+
+#welcome-text {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: maroon;
+    
 }
 
 
@@ -74,7 +91,7 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
-  color: whitesmoke;
+  color: red;
 }
 
 body {
@@ -87,5 +104,5 @@ body {
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 100px; /* Vertically center the text there */
 }
