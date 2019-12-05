@@ -34,7 +34,7 @@ namespace Agendo.Data
         public async static Task<UserAccount> IsLoginValid(LoginViewModel model, AgendoContext context)
         {
             return await (from m in context.Users
-                          where m.UserName == model.UsernameOrEmail || m.EmailAddress == model.UsernameOrEmail
+                          where (m.UserName == model.UsernameOrEmail || m.EmailAddress == model.UsernameOrEmail)
                                                       && m.Password == model.Password
                           select m).SingleOrDefaultAsync(); // finds object that matches.
         }
