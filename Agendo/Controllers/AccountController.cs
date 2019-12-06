@@ -70,7 +70,7 @@ namespace Agendo.Controllers
                     _httpAccessor.HttpContext.Session.SetString("UserName", user.UserName);
 
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Dashboard", "CalendarEvents");
                 }
                 else
                 {
