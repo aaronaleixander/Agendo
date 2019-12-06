@@ -35,12 +35,12 @@
   
                         @if (sessionData.HttpContext.Session.GetInt32("UserID").HasValue)
                         {
+                            <li id="logout" >
+                                Hello @sessionData.HttpContext.Session.GetString("UserName")
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark"
                                    asp-controller="Account" asp-action="Logout">Logout</a>
-                            </li>
-                            <li class="nav-item">
-                                Hello @sessionData.HttpContext.Session.GetString("FirstName" + " " + "LastName");
                             </li>
                         }
                         else

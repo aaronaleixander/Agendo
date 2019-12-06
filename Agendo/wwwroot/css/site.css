@@ -2,6 +2,10 @@
     background-image: url("Images/agendo_background.png");
 }
 
+#logout {
+    margin-left: 45em;
+}
+
 #regheader {
     margin-left: 50em;
 }
