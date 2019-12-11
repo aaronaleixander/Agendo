@@ -8,6 +8,7 @@ namespace Agendo.Controllers
 {
     public class CalendarEventsController : Controller
     {
+        [HttpGet]
         public IActionResult Dashboard()
         {
             return View();
